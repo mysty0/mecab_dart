@@ -7,6 +7,8 @@ import 'package:mecab_dart/mecab_dart.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -20,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   /// result of mecab
   String text = "";
   /// mecab instance
-  var tagger = new Mecab();
+  var tagger = Mecab();
   ///
   List<TokenNode> tokens = [];
 
@@ -98,7 +100,7 @@ class _MyAppState extends State<MyApp> {
                               SelectableText(t.features[8])
                             ]
                           )
-                        ).toList()
+                        )
                     ]
                   ),
                 ),
